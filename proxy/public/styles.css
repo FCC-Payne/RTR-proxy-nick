@@ -1,0 +1,10 @@
+body {
+  margin: 0px;
+}
+
+.photo-form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding:30px;
+  margin: 30px;
+}
