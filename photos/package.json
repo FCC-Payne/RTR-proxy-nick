@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint .",
     "react-dev": "webpack -d --watch",
-    "start": "nodemon server/index.js"
+    "start": "nodemon index.js"
   },
   "dependencies": {
     "aws-sdk": "^2.250.1",

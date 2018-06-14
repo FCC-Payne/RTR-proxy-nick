@@ -1,7 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const FeaturedImgZoom = styled.img`
+const FeaturedImgZoom = styled.img.attrs({
+  style: ({objectPosition, visibility, opacity}) => ({
+    objectPosition,
+    visibility,
+    opacity,
+  }),
+})`
   height: 720px;
   position: relative;
   overflow: hidden;
@@ -9,9 +15,6 @@ const FeaturedImgZoom = styled.img`
   transition-property: visibility, opacity, object-position; 
   transition-timing-function: ease-out;
   transition-duration: 0.5s, 0.5s, 0.3s;
-  object-position: ${props => props.objectPosition};
-  visibility: ${props => props.visibility};
-  opacity: ${props => props.opacity};
 `;
 
 class FeaturedZoom extends React.Component {
