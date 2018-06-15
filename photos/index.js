@@ -3,7 +3,7 @@ const helpers = require('./database/helpers.js');
 
 const app = express();
 
-app.use('/photo-viewer', express.static('public/', {index: 'bundle.js'}));
+app.use('/:id/photo-viewer', express.static('public/'));
 
 app.get('/:id/photos/photo-viewer', (req, res) => {
   helpers.getEndpoints(req.params.id, (err, data) => {
