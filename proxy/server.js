@@ -2,8 +2,8 @@ const express = require('express');
 
 const app = express();
 
-app.get('/photo-viewer', (req, res) => {
-  res.redirect('http://localhost:3001/photo-viewer');
+app.get('/:id/photo-viewer', (req, res) => {
+  res.redirect(`http://localhost:3001/${req.params.id}/photo-viewer/bundle.js`);
 });
 
 app.get('/forms', (req, res) => {
