@@ -10,8 +10,8 @@ app.get('/:id/photo-viewer/styles', (req, res) => {
   res.redirect(`http://localhost:3001/${req.params.id}/photo-viewer/styles.css`);
 });
 
-app.get('/forms', (req, res) => {
-  res.sendStatus(200);
+app.get('/:id/forms', (req, res) => {
+  res.redirect(`http://localhost:3003/${req.params.id}/bundle.js`);
 });
 
 app.get('/:id/carousel/bundle', (req, res) => {
