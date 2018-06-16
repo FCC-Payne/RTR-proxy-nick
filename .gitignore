@@ -6,3 +6,6 @@ config.js
 
 ## NPM ##
 proxy/node_modules/
+
+## Components ##
+/forms
