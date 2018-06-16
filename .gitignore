@@ -6,12 +6,3 @@ config.js
 
 ## NPM ##
 proxy/node_modules/
-photos/node_modules/
-reviews/node_modules/
-
-## Compiled ##
-photos/public/bundle.js
-reviews/client/dist/bundle.js
-
-## Test Coverage ##
-photos/coverage/
