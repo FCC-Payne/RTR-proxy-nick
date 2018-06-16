@@ -22,8 +22,12 @@ app.get('/:id/carousel/styles', (req, res) => {
   res.redirect(`http://localhost:3004/styles.css`);
 });
 
-app.get('/reviews', (req, res) => {
-  res.sendStatus(200);
+app.get('/:id/reviews/bundle', (req, res) => {
+  res.redirect(`http://localhost:3002/${req.params.id}/bundle.js`);
+});
+
+app.get('/:id/reviews/styles', (req,res) => {
+  res.redirect(`http://localhost:3002/${req.params.id}/stylesheet.css`);
 });
 
 app.use('/:id', express.static('public'));
