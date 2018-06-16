@@ -2,16 +2,24 @@ const express = require('express');
 
 const app = express();
 
-app.get('/:id/photo-viewer', (req, res) => {
+app.get('/:id/photo-viewer/bundle', (req, res) => {
   res.redirect(`http://localhost:3001/${req.params.id}/photo-viewer/bundle.js`);
+});
+
+app.get('/:id/photo-viewer/styles', (req, res) => {
+  res.redirect(`http://localhost:3001/${req.params.id}/photo-viewer/styles.css`);
 });
 
 app.get('/forms', (req, res) => {
   res.sendStatus(200);
 });
 
-app.get('/carousel', (req, res) => {
-  res.sendStatus(200);
+app.get('/:id/carousel/bundle', (req, res) => {
+  res.redirect(`http://localhost:3004/bundle.js`);
+});
+
+app.get('/:id/carousel/styles', (req, res) => {
+  res.redirect(`http://localhost:3004/styles.css`);
 });
 
 app.get('/reviews', (req, res) => {
