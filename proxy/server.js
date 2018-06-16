@@ -15,11 +15,11 @@ app.get('/:id/forms', (req, res) => {
 });
 
 app.get('/:id/carousel/bundle', (req, res) => {
-  res.redirect(`http://localhost:3004/bundle.js`);
+  res.redirect(`http://localhost:3004/${req.params.id}/bundle.js`);
 });
 
 app.get('/:id/carousel/styles', (req, res) => {
-  res.redirect(`http://localhost:3004/styles.css`);
+  res.redirect(`http://localhost:3004/${req.params.id}/styles.css`);
 });
 
 app.get('/reviews', (req, res) => {
